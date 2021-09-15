@@ -18,13 +18,13 @@ def main():
     ## decode JSON to Python data structure
     helmetson = json.loads(helmet.decode('utf-8'))
     
-    ## display our Pythonic data
+   ## display our Pythonic data
    # print("\n\nConverted Python data")
    # print(helmetson)
    # print('\n\nPeople in Space: ', helmetson['number'])
-    people = helmetson['people']
+   # people = helmetson['people']
     print(f'People in space: {len(helmetson["people"])}')
-  #  print(f'People in space: {helmetson["number"]}')
+    print(f'People in space: {helmetson["number"]}')
     for x in helmetson["people"]:
-        print(f"{x['name']} is on the {x['craft']}.")
+            print(f"{x['name']} is on the {x['craft']}.")
 main()
