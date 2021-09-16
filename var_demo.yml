@@ -1,0 +1,18 @@
+- name: var demo
+  hosts: planetexpress 
+  #gather_facts: yes 
+  gather_facts: yes 
+
+  vars:
+   smurf_color: "red"
+
+   tasks:
+     - name: Smurf report
+       debug:
+         msg: "All smurfs are {{ smurf_color }} !"
+       when: ansible_os_family == "RedHat"
+       register: error
+
+     - debug:
+         var: error.skip_reason
+         verbosity: 2
