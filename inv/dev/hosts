@@ -17,7 +17,8 @@ taz    ansible_host=10.10.2.6 ansible_user=farnsworth ansible_ssh_pass=alta3
 sw-1
 sw-2
 
-[arista_switches:vars]
-ansible_user=admin
-ansible_network_os=eos
 
+[arista_switches:vars]
+ansible_network_os=eos
+ansible_user=admin
+ansible_ssh_pass=alta3    
